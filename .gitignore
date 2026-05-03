@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Rust build
+src-tauri/target/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+.cursorrules
+*.swp
+*.swo
+*~
+.DS_Store
+
+# iOS build artifacts
+.derived-ios/
+
+# Playwright
+/test-results/
+/playwright-report/
+
+# Temporary screenshots
+*.png
+!src-tauri/icons/*.png
+
+# Internal docs
+FRAMEWORK.md

@@ -1,0 +1,5 @@
+[env]
+# whisper.cpp / ggml 在 macOS arm64 下会通过 try_run 探测原生 CPU 特性；
+# 某些 Xcode/CMake 组合可能卡住，禁用 native 探测以保证 macOS/Windows 稳定构建。
+GGML_NATIVE = "OFF"
+CMAKE_OSX_DEPLOYMENT_TARGET = "10.15"

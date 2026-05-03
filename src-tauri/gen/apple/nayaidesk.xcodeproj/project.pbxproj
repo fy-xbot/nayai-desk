@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E08A321F28E9967AFBFE873 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B91F8B1B8A5571A47E6623C /* MetalKit.framework */; };
+		12745C4DCC0792A30F7AB4E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB6ED471FE7B03D075E4359 /* CoreGraphics.framework */; };
+		1E75ED1CAA39B4784E3D9017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78D9BC98902834ED275E040 /* Assets.xcassets */; };
+		25041AD239D5F05672C12070 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1D718C5617F2532636770FC /* main.mm */; };
+		267AF173539AEBCD817C5F72 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570BC6E63CF7859AA670B3AC /* Security.framework */; };
+		3B72CCA2F47347AD4490C7B9 /* libapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8284C990D86B611CE25C26E0 /* libapp.a */; };
+		4D8C1DE599E76A0B96683F87 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F1F183EC0469BB07855D84 /* WebKit.framework */; };
+		4FB78AF1FF3730C09D4C3768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B6FD21EDC3652498A84E93 /* LaunchScreen.storyboard */; };
+		60978F9C68B90FB534F69E0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C09ACA584B9304F1CE940F9 /* UIKit.framework */; };
+		8E940FDC528BB5B0233ED3FC /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9DF7825DB0FB3F895D6140 /* Metal.framework */; };
+		AC0732B8297ACE4BB70DF351 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 496C354B0C9E55D277D1C696 /* assets */; };
+		E0AC8A64FB539D11AB0A6EDA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08BD0FE4F09C1DFF50E16CE /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E9DF7825DB0FB3F895D6140 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		11B6FD21EDC3652498A84E93 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		496C354B0C9E55D277D1C696 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = SOURCE_ROOT; };
+		570BC6E63CF7859AA670B3AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6AC12BFD191BA3DAB1BEDD5C /* nayaidesk_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nayaidesk_iOS.entitlements; sourceTree = "<group>"; };
+		7DB927D083A0A22062B90A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8284C990D86B611CE25C26E0 /* libapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libapp.a; sourceTree = "<group>"; };
+		8B91F8B1B8A5571A47E6623C /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		9586858A7D0A07308C0D9715 /* lib.rs */ = {isa = PBXFileReference; path = lib.rs; sourceTree = "<group>"; };
+		9C09ACA584B9304F1CE940F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B78D9BC98902834ED275E040 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCB6ED471FE7B03D075E4359 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9F1F183EC0469BB07855D84 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E08BD0FE4F09C1DFF50E16CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E1D718C5617F2532636770FC /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		EAF6C0599D9E37F292E40970 /* main.rs */ = {isa = PBXFileReference; path = main.rs; sourceTree = "<group>"; };
+		EECCA247AFBF772A109F8C4C /* nayaidesk_iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = nayaidesk_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65D5BA48440201B10DE489F /* bindings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bindings.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CE3A7DD6A457EFE22C84D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B72CCA2F47347AD4490C7B9 /* libapp.a in Frameworks */,
+				12745C4DCC0792A30F7AB4E0 /* CoreGraphics.framework in Frameworks */,
+				8E940FDC528BB5B0233ED3FC /* Metal.framework in Frameworks */,
+				0E08A321F28E9967AFBFE873 /* MetalKit.framework in Frameworks */,
+				E0AC8A64FB539D11AB0A6EDA /* QuartzCore.framework in Frameworks */,
+				267AF173539AEBCD817C5F72 /* Security.framework in Frameworks */,
+				60978F9C68B90FB534F69E0B /* UIKit.framework in Frameworks */,
+				4D8C1DE599E76A0B96683F87 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F7130A630175346CDF7E2FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCB6ED471FE7B03D075E4359 /* CoreGraphics.framework */,
+				8284C990D86B611CE25C26E0 /* libapp.a */,
+				0E9DF7825DB0FB3F895D6140 /* Metal.framework */,
+				8B91F8B1B8A5571A47E6623C /* MetalKit.framework */,
+				E08BD0FE4F09C1DFF50E16CE /* QuartzCore.framework */,
+				570BC6E63CF7859AA670B3AC /* Security.framework */,
+				9C09ACA584B9304F1CE940F9 /* UIKit.framework */,
+				C9F1F183EC0469BB07855D84 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E1D2F854E5AE034C58F22D2 = {
+			isa = PBXGroup;
+			children = (
+				496C354B0C9E55D277D1C696 /* assets */,
+				B78D9BC98902834ED275E040 /* Assets.xcassets */,
+				11B6FD21EDC3652498A84E93 /* LaunchScreen.storyboard */,
+				4CA46B0A5B1F3952795D5B00 /* Externals */,
+				B26EAB8E6A9790A3855FDB93 /* nayaidesk_iOS */,
+				CC4DD57D3A119369B48C886C /* Sources */,
+				8658A8982A8EFE22AE4B5804 /* src */,
+				0F7130A630175346CDF7E2FF /* Frameworks */,
+				D171D3F4EF0F24F2836627B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CA46B0A5B1F3952795D5B00 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		8658A8982A8EFE22AE4B5804 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9586858A7D0A07308C0D9715 /* lib.rs */,
+				EAF6C0599D9E37F292E40970 /* main.rs */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		8E87B89A88CBAB57E0E5A0D2 /* bindings */ = {
+			isa = PBXGroup;
+			children = (
+				F65D5BA48440201B10DE489F /* bindings.h */,
+			);
+			path = bindings;
+			sourceTree = "<group>";
+		};
+		B26EAB8E6A9790A3855FDB93 /* nayaidesk_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7DB927D083A0A22062B90A57 /* Info.plist */,
+				6AC12BFD191BA3DAB1BEDD5C /* nayaidesk_iOS.entitlements */,
+			);
+			path = nayaidesk_iOS;
+			sourceTree = "<group>";
+		};
+		CC4DD57D3A119369B48C886C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D29F07A454E265B0A264F2D0 /* nayaidesk */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D171D3F4EF0F24F2836627B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EECCA247AFBF772A109F8C4C /* nayaidesk_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D29F07A454E265B0A264F2D0 /* nayaidesk */ = {
+			isa = PBXGroup;
+			children = (
+				E1D718C5617F2532636770FC /* main.mm */,
+				8E87B89A88CBAB57E0E5A0D2 /* bindings */,
+			);
+			path = nayaidesk;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95144D4453B05B5B88E7E011 /* nayaidesk_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DA5B04B1FC1026E093CF22B /* Build configuration list for PBXNativeTarget "nayaidesk_iOS" */;
+			buildPhases = (
+				0B47546D3DBF5CED0003247C /* Build Rust Code */,
+				95C99B2ECAD77D6532BCC4A9 /* Sources */,
+				1D7E08FAFEA2CFA0DE14A549 /* Resources */,
+				9CE3A7DD6A457EFE22C84D6F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nayaidesk_iOS;
+			packageProductDependencies = (
+			);
+			productName = nayaidesk_iOS;
+			productReference = EECCA247AFBF772A109F8C4C /* nayaidesk_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F87BBAA980D77D85884A9CF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 0999BF30FECECAD374C341EC /* Build configuration list for PBXProject "nayaidesk" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3E1D2F854E5AE034C58F22D2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D171D3F4EF0F24F2836627B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95144D4453B05B5B88E7E011 /* nayaidesk_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D7E08FAFEA2CFA0DE14A549 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E75ED1CAA39B4784E3D9017 /* Assets.xcassets in Resources */,
+				4FB78AF1FF3730C09D4C3768 /* LaunchScreen.storyboard in Resources */,
+				AC0732B8297ACE4BB70DF351 /* assets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B47546D3DBF5CED0003247C /* Build Rust Code */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Rust Code";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Externals/x86_64/${CONFIGURATION}/libapp.a",
+				"$(SRCROOT)/Externals/arm64/${CONFIGURATION}/libapp.a",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "npm run -- tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95C99B2ECAD77D6532BCC4A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25041AD239D5F05672C12070 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2736F68B5C9A5E54D4AFAECF /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					arm64,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = nayaidesk_iOS/nayaidesk_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+				);
+				INFOPLIST_FILE = nayaidesk_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xbot.NayAIDesk;
+				PRODUCT_NAME = "NayAI Desk";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
+			};
+			name = debug;
+		};
+		440A479BE2FBF38592DFCDAA /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = debug;
+		};
+		9EB0D6E1210EDB8AB2005E29 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					arm64,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = nayaidesk_iOS/nayaidesk_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+				);
+				INFOPLIST_FILE = nayaidesk_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xbot.NayAIDesk;
+				PRODUCT_NAME = "NayAI Desk";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
+			};
+			name = release;
+		};
+		A31E986131BE278DF4BA8F3A /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0999BF30FECECAD374C341EC /* Build configuration list for PBXProject "nayaidesk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				440A479BE2FBF38592DFCDAA /* debug */,
+				A31E986131BE278DF4BA8F3A /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		2DA5B04B1FC1026E093CF22B /* Build configuration list for PBXNativeTarget "nayaidesk_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2736F68B5C9A5E54D4AFAECF /* debug */,
+				9EB0D6E1210EDB8AB2005E29 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F87BBAA980D77D85884A9CF3 /* Project object */;
+}

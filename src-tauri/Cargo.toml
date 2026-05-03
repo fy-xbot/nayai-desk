@@ -1,0 +1,41 @@
+[package]
+name = "nayaidesk"
+version = "0.1.0"
+description = "NayAI Desk - 多模型 AI 聚合工作台"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "nayaidesk_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["unstable"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# 语音识别：仅桌面平台编译，iOS/Android 不拉这些依赖以免拖慢构建
+[target.'cfg(not(any(target_os = "ios", target_os = "android")))'.dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "stream"] }
+futures-util = "0.3"
+tokio = { version = "1", features = ["sync", "fs", "io-util", "rt-multi-thread", "macros"] }
+
+# whisper.cpp 的 Rust 绑定，本地离线语音转文字
+# 先统一使用 CPU 后端保证 macOS / Windows 都能稳定构建；后续可再增加 Metal 开关
+[target.'cfg(target_os = "macos")'.dependencies]
+whisper-rs = { version = "0.16", default-features = false }
+
+[target.'cfg(target_os = "windows")'.dependencies]
+whisper-rs = { version = "0.16", default-features = false }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+whisper-rs = { version = "0.16", default-features = false }

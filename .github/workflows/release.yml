@@ -1,0 +1,136 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-latest
+            target: aarch64-apple-darwin
+            label: macos
+          - platform: ubuntu-22.04
+            target: x86_64-unknown-linux-gnu
+            label: linux
+          - platform: windows-latest
+            target: x86_64-pc-windows-msvc
+            label: windows
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - name: Install Linux dependencies
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf libasound2-dev
+
+      - name: Install frontend dependencies
+        run: npm install
+
+      - name: Build
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: --target ${{ matrix.target }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ matrix.label }}
+          path: |
+            src-tauri/target/${{ matrix.target }}/release/bundle/**/*.dmg
+            src-tauri/target/${{ matrix.target }}/release/bundle/**/*.app.tar.gz
+            src-tauri/target/${{ matrix.target }}/release/bundle/**/*.exe
+            src-tauri/target/${{ matrix.target }}/release/bundle/**/*.msi
+            src-tauri/target/${{ matrix.target }}/release/bundle/**/*.AppImage
+            src-tauri/target/${{ matrix.target }}/release/bundle/**/*.deb
+            src-tauri/target/${{ matrix.target }}/release/bundle/**/*.rpm
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: List artifacts
+        run: find artifacts -type f | head -20
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          name: NayAI Desk ${{ github.ref_name }}
+          body: |
+            ## NayAI Desk - 多模型 AI 聚合工作台
+
+            在一个桌面窗口中并排打开多个 AI 聊天界面，统一输入、广播提问，并通过 AI 裁判对比回答质量。
+
+            ### 功能特性
+
+            - **多模型工作区** - 最多同时展示 6 个 AI 面板，支持列布局、行布局、网格布局
+            - **统一输入广播** - 输入一次，同时发送到所有面板，支持文本和图片
+            - **AI 评分** - 配置裁判模型（DeepSeek / OpenAI / Anthropic），对每个回答打分 0-10
+            - **离线语音输入** - 通过 whisper.cpp 本地转录麦克风语音
+            - **会话管理** - 创建、切换、持久化对话记录
+            - **网页精简** - 注入 CSS/JS 隐藏各平台原生顶栏和输入区域
+
+            ### 支持平台
+
+            | 地区 | 平台 |
+            |------|------|
+            | 国际 | ChatGPT, Google Gemini, Anthropic Claude, Perplexity, xAI Grok |
+            | 国内 | DeepSeek, 豆包, Kimi, 通义千问, 文心一言 |
+
+            ### 下载安装
+
+            **macOS:**
+            下载 `.dmg` 文件，打开后将 NayAI Desk 拖入 Applications 文件夹。
+            如果提示"无法验证开发者"，在终端运行：`xattr -cr /Applications/NayAI\ Desk.app`
+
+            **Windows:**
+            下载 `.msi` 文件，双击安装即可。
+
+            **Linux:**
+            下载 `.AppImage` 文件，添加执行权限后运行：`chmod +x NayAI*.AppImage && ./NayAI*.AppImage`
+
+            ### 技术栈
+
+            - 前端：React 19, TypeScript, Vite 7, Tailwind CSS 4, Zustand 5
+            - 后端：Tauri 2 (Rust), whisper-rs
+            - 平台：macOS, Windows, Linux
+          files: |
+            artifacts/**/*.dmg
+            artifacts/**/*.app.tar.gz
+            artifacts/**/*.exe
+            artifacts/**/*.msi
+            artifacts/**/*.AppImage
+            artifacts/**/*.deb
+            artifacts/**/*.rpm
